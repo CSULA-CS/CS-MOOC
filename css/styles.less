@@ -1,0 +1,166 @@
+// variables
+@shadow: #bbb;
+
+// main components
+body {
+	background-color: lightgrey;
+	padding: 0 5%;
+}
+
+.page {
+	border-left: 1px solid;
+	border-right: 1px solid;
+	background-color: white;
+
+	-webkit-box-shadow: 4px 2px  @shadow,  -4px 0 2px @shadow;   
+	-moz-box-shadow: 4px 0 2px @shadow,  -4px 0 2px @shadow;   
+	box-shadow: 4px 0 2px @shadow,  -4px 0 2px @shadow; 
+
+	padding: 20px;
+	margin-top: 41px;
+}
+
+.class-note {
+	border: 1px solid gray;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+#class-note-content {
+	margin: 20px;
+	padding: 20px;
+}
+
+// Typography
+
+
+// Grid System
+
+// Tables
+@media (max-width: 760px)  {
+
+	caption {
+		display: block;
+		width: 150px;
+		margin: 0 auto;
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	.table tbody tr > td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+
+	.off-hour-table {
+		td:nth-of-type(1):before {
+			content: "Russ Abbott";
+			font-weight: bold;
+		}
+		td:nth-of-type(2):before {
+			content: "Eric Liao";
+			font-weight: bold;
+		}
+	}
+
+	.class-table {
+		/*
+		Label the data
+		*/
+		td:nth-of-type(1):before {
+			content: "Week #";
+			font-weight: bold;
+		}
+		td:nth-of-type(2):before {
+			content: "Pre-Class";
+			font-weight: bold;
+		}
+		td:nth-of-type(3):before {
+			content: "Day-1";
+			font-weight: bold;
+		}
+		td:nth-of-type(4):before {
+			content: "Day-2";
+			font-weight: bold;
+		}
+	}
+}
+
+// List
+ul {
+	
+}
+
+// Forms
+
+// Helpers
+pre {
+	word-wrap: normal;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.googleChart {
+	height:300px;
+	width:450px;
+	float: left;
+	margin: 0;
+	background: none;
+}
+
+.navbar-inverse .divider-vertical {
+	border-left-color: lightgrey;
+	border-right-color: darkgrey;
+}
+
+.box {
+  -webkit-transition:all linear 0.5s;
+  -moz-transition:all linear 0.5s;
+  -ms-transition:all linear 0.5s;
+  -o-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  opacity: 1;
+}
+
+.box.ng-hide-add,
+.box.ng-hide-remove {
+	display: table-row !important;
+	overflow: hidden;
+}
+
+.box.ng-hide {
+	opacity: 0;
+}
+
+// some other specific css for situations
+@import "syllabus.css";
+@import "prettify.css";
+

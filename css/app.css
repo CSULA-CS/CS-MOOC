@@ -1,0 +1,8 @@
+/* CS 201 css stylesheet */
+
+@import("syllabus.css");
+@import("prettify.css");
+
+body {
+  background-color: #aaa;
+}

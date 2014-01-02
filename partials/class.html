@@ -1,0 +1,155 @@
+<div class="row-fluid">
+	<div class="page-header">
+		<h1>Course Content <small>Calendar</small></h1>
+	</div>
+	<div class="span12">
+		<table class="table class-table">
+
+			<thead>
+				<tr>
+					<th>
+						Week #<br>
+						<code>[Start] ~ [End]</code>
+					</th>
+					<th>
+						Pre-Class
+					</th>
+					<th>
+						Day-1-Class
+					</th>
+					<th>
+						Day-2-Class
+					</th>
+				</tr>
+			</thead>
+
+			<tbody ng-repeat="week in weeks">
+
+				<tr ng-class="{ 'warning' : week.status == 'future', 'success' : week.status == 'current', 'error' : week.status == 'passed' }" ng-click="toggleWeek(week)">
+
+					<td>
+						<b>{{ week.week }}</b><br>
+						<code>{{ week.startDate | date:'MMM d' }} ~ {{ week.endDate | date:'MMM d' }}</code><br>
+						<span class="label label-success" ng-show="week.status == 'current'">{{ week.status }}</span><br>
+						<span class="muted" ng-show="week.week == 'Week-3'">
+							<i class="icon-heart"></i>MLK - January 20
+						</span>
+					</td>
+
+					<td>
+						<ul>
+							<li ng-hide="!week.udacity">
+								<a ng-href="{{ week.udacity }}">
+									<i class="icon-film"></i>Udacity
+								</a>
+							</li>
+
+							<li ng-hide="!week.udacity2">
+								<a ng-href="{{ week.udacity2 }}">
+									<i class="icon-film"></i>Udacity - 2nd Part
+								</a>
+							</li>
+
+							<li ng-hide="!week.ppt">
+								<a ng-href="{{ week.ppt }}">
+									<i class="icon-file"></i>Course Notes
+								</a>
+							</li>
+
+							<li>
+								<i class="icon-book"></i>Textbook - {{ week.textBook }}
+							</li>
+
+							<li ng-hide="!week.homework">
+								<a ng-href="{{ week.homework }}">
+									<i class="icon-pencil"></i>Homework [CSNS]
+								</a>
+							</li>
+						</ul>
+					</td>
+					<td>
+						<ul ng-hide="week.week == 'Week-3'">
+							<li>
+								<i class="icon-retweet"></i>Review </br>
+							</li>
+							<li ng-hide="week.midtermChoice">
+								<i class="icon-comment"></i>Presentation
+							</li>
+							<li ng-hide="!week.quiz">
+								<a ng-href="{{ week.quiz }}">
+									<i class="icon-check"></i>Quiz [CSNS]
+								</a>
+							</li>
+						</ul>
+						<p ng-show="week.week == 'Week-3'">
+							<b>Happy MLK Holiday</b>
+						</p>
+					</td>
+
+					<td>
+						<ul>
+							<li ng-hide="!week.lab || week.week == 'Week-9'">
+								<a ng-href="{{ week.lab }}">
+									<i class="icon-info-sign"></i>Lab Exercise [CSNS]
+								</a>
+							</li>
+							<li ng-show="week.week == 'Week-9'">
+								<a ng-href="{{ week.lab }}">
+									<i class="icon-warning-sign"></i>Programming Project
+								</a>
+							</li>
+							<li ng-hide="!week.midtermProg || week.week == 'Week-9'">
+								<a ng-href="{{ week.midtermProg }}">
+									<i class="icon-info-sign"></i>{{ week.week }}-Programming [CSNS]
+								</a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+
+				<!-- Extra Announcement for the week -->
+				<tr ng-hide="!week.isExpanded" class="box">
+					<td colspan="4">
+						<div class="panel panel-default">
+							<div class="panel-heading">Announcement</div>
+							<div class="panel-body" ng-include="'partials/' + week.week + '-announcement.html'"></div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="jumbotron">
+		<div class="container">
+		<h1>Office Hours</h1>
+		<p>
+			In trouble? Come by the office hour!
+		</p>
+		<table class="off-hour-table table table-bordered">
+			<thead>
+				<tr>
+					<th>
+						Russ Abbott
+					</th>
+					<th>
+						Eric Liao (TA)
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						Email any time. </br>
+						In person by appointment.
+					</td>
+					<td>
+						Mon 9am - 1:30pm & 3:20 - 6pm @ Computer Science Office(E&T A-322),</br>
+						Tue 11:30 - 6pm @ Computer Science Office(E&T A-322) </br>
+						Email any time.
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,9 @@
+/* Syllabus CSS */
+
+ol.lower-alpha {
+  list-style-type: lower-alpha;
+}
+
+ul.none {
+  list-style-type: none;
+}

@@ -1,0 +1,150 @@
+<!doctype html>
+<!-- html 5 mode with angularjs sweet! -->
+<html lang="en" ng-app="CSULA-MOOC-App">
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- for mobile device, always start with scale of 1.0 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- non confusing title, right? -->
+  <title>CS 201 Lecture Website</title>
+
+  <link rel="stylesheet" type="text/css" href="bower_components/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/codemirror/theme/3024-night.css">
+  <script type="text/javascript" src="bower_components/codemirror/lib/codemirror.js"></script>
+  <script type="text/javascript" src="bower_components/codemirror/mode/clike/clike.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
+
+  <!-- Angular -->
+  <script type="text/javascript" src="lib/angular/angular.js"></script>
+  <script type="text/javascript" src="lib/angular/angular-animate.js"></script>
+  <script type="text/javascript" src="lib/angular/angular-route.js"></script>
+
+  <!-- Font Awesome -->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <!-- AngularJS Bootstrap CSS -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+
+  <!-- defined javascript for angularjs -->
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+
+  <!-- AngularJS Bootstrap JS -->
+  <!-- In production use -->
+  <!-- <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script> -->
+  <script src="lib/ui-bootstrap-tpls-0.9.0.js"></script>
+
+  <script src="lib/ng-google-chart.js"></script>
+
+  <!-- custom css -->
+  <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+
+  <script src="lib/less-1.5.0-b2.min.js"></script>
+</head>
+
+<!-- Simple top level controller -->
+<body ng-controller="MainCtrl">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <i class="fa fa-code"></i> CS 201
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="">
+            <a href="#/syllabus">
+              <i class="fa fa-file-text"></i> Syllabus
+            </a>
+          </li>
+
+          <li class="">
+            <a href="#">
+              <i class="fa fa-calendar"></i> Course Material
+            </a>
+          </li>
+
+          <li>
+            <a href="https://docs.google.com/spreadsheet/ccc?key=0AuI58s-_d3o5dG5NZHRVTWRNTHNubjJpQXpGMEpodnc&usp=drive_web#gid=0">
+              <i class="fa fa-users"></i> Attendances
+            </a>
+          </li>
+
+          <li class="divider-vertical"></li>
+
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle">External Resources <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="http://bcs.wiley.com/he-bcs/Books?action=index&itemId=1118431111&bcsId=7872">
+                  <i class="fa fa-book"></i> Book - Student Companion
+                </a>
+              </li>
+
+              <li class="">
+                <a href="http://csns.calstatela.edu/department/cs/">
+                  <i class="fa fa-cloud-upload"></i> CSNS
+                </a>
+              </li>
+
+              <li class="">
+                <a href="http://www.udacity.com">
+                  <i class="fa fa-youtube-play"></i> Udacity
+                </a>
+              </li>
+
+              <li class="">
+                <a href="http://csns.calstatela.edu/department/cs/forum/view?id=31006">
+                  <i class="fa fa-comment-o"></i> Forum
+                </a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="mailto:rcliao01@gmail.com">
+              <i class="fa fa-envelope-o"></i> Mail Eric
+            </a>
+          </li>
+          <li>
+            <a href="mailto:russ.abbott@gmail.com">
+              <i class="fa fa-envelope-o"></i> Mail Abbott
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page" ng-view></div>
+
+</body>
+</html>
+
