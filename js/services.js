@@ -13,7 +13,7 @@ angular.module('CSULA-MOOC-App.services', []).
   		{
   			'week' : 'Week-1',
         'startDate': new Date(2014, 0, 6),
-        'endDate' : new Date(2014, 0, 12),
+        'endDate' : new Date(2014, 0, 9),
         // lesson 1 from udacity
         'homework' : 'http://csns.calstatela.edu/section/taken?quarter=1141',
   			'udacity' : 'https://www.udacity.com/course/viewer#!/c-cs046/l-176475143',
@@ -25,8 +25,8 @@ angular.module('CSULA-MOOC-App.services', []).
   		},
       {
         'week' : 'Week-2',
-        'startDate': new Date(2014, 0, 13),
-        'endDate' : new Date(2014, 0, 19),
+        'startDate': new Date(2014, 0, 10),
+        'endDate' : new Date(2014, 0, 15),
         // lesson 2 from udacity
         'udacity' : 'https://www.udacity.com/course/viewer#!/c-cs046/l-161445800',
         'ppt' : 'http://www.calstatela.edu/academic/ecst/cs/cs201/ch02/',
@@ -38,8 +38,8 @@ angular.module('CSULA-MOOC-App.services', []).
       },
       {
         'week' : 'Week-3',
-        'startDate': new Date(2014, 0, 20),
-        'endDate' : new Date(2014, 0, 26),
+        'startDate': new Date(2014, 0, 16),
+        'endDate' : new Date(2014, 0, 22),
         // lesson 3 from udacity
         'udacity' : 'https://www.udacity.com/course/viewer#!/c-cs046/l-183784769',
         'ppt' : 'http://www.calstatela.edu/academic/ecst/cs/cs201/ch03/',
@@ -51,8 +51,8 @@ angular.module('CSULA-MOOC-App.services', []).
       },
       {
         'week' : 'Week-4',
-        'startDate': new Date(2014, 0, 27),
-        'endDate' : new Date(2014, 1, 2),
+        'startDate': new Date(2014, 0, 23),
+        'endDate' : new Date(2014, 0, 29),
         // lesson 4 from udacity
         'udacity' : 'https://www.udacity.com/course/viewer#!/c-cs046/l-192345866',
         'ppt' : 'http://www.calstatela.edu/academic/ecst/cs/cs201/ch04/',
@@ -64,8 +64,8 @@ angular.module('CSULA-MOOC-App.services', []).
       },
       {
         'week' : 'Week-5',
-        'startDate': new Date(2014, 1, 3),
-        'endDate' : new Date(2014, 1, 9),
+        'startDate': new Date(2014, 0, 30),
+        'endDate' : new Date(2014, 1, 5),
         // lesson 5-1
         'udacity' : 'https://www.udacity.com/course/viewer#!/c-cs046/l-216159736/',
         // lesson 5-2
@@ -80,8 +80,8 @@ angular.module('CSULA-MOOC-App.services', []).
       {
         // yes a midterm here
         'week' : 'Midterm',
-        'startDate': new Date(2014, 1, 10),
-        'endDate' : new Date(2014, 1, 16),
+        'startDate': new Date(2014, 1, 6),
+        'endDate' : new Date(2014, 1, 12),
         'midtermChoice' : 'http://csns.calstatela.edu/section/taken?quarter=1141',
         'midtermProg' : 'http://csns.calstatela.edu/section/taken?quarter=1141',
         'testbank': 'http://csns.calstatela.edu/section/taken?quarter=1141',
@@ -90,8 +90,8 @@ angular.module('CSULA-MOOC-App.services', []).
       },
       {
         'week' : 'Week-7',
-        'startDate': new Date(2014, 1, 17),
-        'endDate' : new Date(2014, 1, 23),
+        'startDate': new Date(2014, 1, 13),
+        'endDate' : new Date(2014, 1, 19),
         // lesson 6-1
         'udacity' : 'https://www.udacity.com/course/viewer#!/c-cs046/l-218627726',
         'ppt' : 'http://www.calstatela.edu/academic/ecst/cs/cs201/ch06/',
@@ -103,8 +103,8 @@ angular.module('CSULA-MOOC-App.services', []).
       },
       {
         'week' : 'Week-8',
-        'startDate': new Date(2014, 1, 24),
-        'endDate' : new Date(2014, 2, 2),
+        'startDate': new Date(2014, 1, 20),
+        'endDate' : new Date(2014, 1, 26),
         // lesson 6-2
         'udacity' : 'https://www.udacity.com/course/viewer#!/c-cs046/l-218843899',
         'ppt' : 'http://www.calstatela.edu/academic/ecst/cs/cs201/ch06/',
@@ -116,8 +116,8 @@ angular.module('CSULA-MOOC-App.services', []).
       },
       {
         'week' : 'Week-9',
-        'startDate': new Date(2014, 2, 3),
-        'endDate' : new Date(2014, 2, 9),
+        'startDate': new Date(2014, 1, 27),
+        'endDate' : new Date(2014, 2, 5),
         // lesson 7-1
         'udacity' : 'https://www.udacity.com/course/viewer#!/c-cs046/l-239184981',
         // lesson 7-2
@@ -131,8 +131,8 @@ angular.module('CSULA-MOOC-App.services', []).
       },
       {
         'week' : 'Week-10',
-        'startDate': new Date(2014, 2, 10),
-        'endDate' : new Date(2014, 2, 16),
+        'startDate': new Date(2014, 2, 6),
+        'endDate' : new Date(2014, 2, 12),
         // lesson 7-3
         'udacity' : 'https://www.udacity.com/course/viewer#!/c-cs046/l-264386418',
         'ppt' : 'http://www.calstatela.edu/academic/ecst/cs/cs201/ch07/',
@@ -144,8 +144,8 @@ angular.module('CSULA-MOOC-App.services', []).
       },
       {
         'week' : 'Final',
-        'startDate': new Date(2014, 2, 17),
-        'endDate' : new Date(2014, 2, 20),
+        'startDate': new Date(2014, 2, 13),
+        'endDate' : new Date(2014, 2, 19),
         // we will discuss what to put here
         'midtermChoice' : 'http://csns.calstatela.edu/section/taken?quarter=1141',
         'midtermProg' : 'http://csns.calstatela.edu/section/taken?quarter=1141',

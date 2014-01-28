@@ -60,7 +60,7 @@
 								<i class="icon-book"></i>Textbook - {{ week.textBook }}
 							</li>
 
-							<li ng-hide="!week.homework">
+							<li ng-hide="!week.homework || week.week == 'Week-1'">
 								<a ng-href="{{ week.homework }}">
 									<i class="icon-pencil"></i>Homework [CSNS]
 								</a>
@@ -69,13 +69,18 @@
 					</td>
 					<td>
 						<ul ng-hide="week.week == 'Week-3'">
-							<li>
+							<li ng-show="week.week == 'Week-1'">
+								<a ng-href="{{ week.homework }}">
+									<i class="icon-pencil"></i>Homework [CSNS]
+								</a>
+							</li>
+							<li ng-hide="week.week == 'Week-1'">
 								<i class="icon-retweet"></i>Review </br>
 							</li>
-							<li ng-hide="week.midtermChoice">
+							<li ng-hide="week.midtermChoice || week.week == 'Week-1'">
 								<i class="icon-comment"></i>Presentation
 							</li>
-							<li ng-hide="!week.quiz">
+							<li ng-hide="!week.quiz || week.week == 'Week-1'">
 								<a ng-href="{{ week.quiz }}">
 									<i class="icon-check"></i>Quiz [CSNS]
 								</a>
@@ -88,6 +93,17 @@
 
 					<td>
 						<ul>
+							<li ng-show="week.week == 'Week-1'">
+								<i class="icon-retweet"></i>Review </br>
+							</li>
+							<li ng-show="week.week == 'Week-1'">
+								<i class="icon-comment"></i>Presentation
+							</li>
+							<li ng-show="week.week == 'Week-1'">
+								<a ng-href="{{ week.quiz }}">
+									<i class="icon-check"></i>Quiz [CSNS]
+								</a>
+							</li>
 							<li ng-hide="!week.lab || week.week == 'Week-9'">
 								<a ng-href="{{ week.lab }}">
 									<i class="icon-info-sign"></i>Lab Exercise [CSNS]

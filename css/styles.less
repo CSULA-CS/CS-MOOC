@@ -20,15 +20,30 @@ body {
 	margin-top: 41px;
 }
 
-.class-note {
-	border: 1px solid gray;
+.navbar-nav>li>a, .navbar-brand {
+	color: white !important;
+	border: 1px solid lightgray;
 	border-radius: 10px;
-	padding: 10px;
+	margin: 5px;
 }
 
-#class-note-content {
-	margin: 20px;
-	padding: 20px;
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1.0);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+  }
+  to { 
+    -webkit-transform: scale(1.0);
+  }
+}
+
+.navbar-nav>li>a:hover { 
+	background-color: darkgray !important;
+	-webkit-animation-name: pulse; 
+	-webkit-animation-duration: 1.5s; 
+	-webkit-animation-iteration-count: 10; 
 }
 
 // Typography
@@ -37,6 +52,15 @@ body {
 // Grid System
 
 // Tables
+table.class-table>tbody>tr {
+	border-left: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+
+	-webkit-box-shadow: 4px 2px  @shadow,  -4px 0 2px @shadow;   
+	-moz-box-shadow: 4px 0 2px @shadow,  -4px 0 2px @shadow;   
+	box-shadow: 4px 0 2px @shadow,  -4px 0 2px @shadow; 
+}
+
 @media (max-width: 760px)  {
 
 	caption {
@@ -113,8 +137,8 @@ body {
 }
 
 // List
-ul {
-	
+ul.none {
+  list-style-type: none;
 }
 
 // Forms
